@@ -51,5 +51,6 @@ const resetForm = () => {
 <style scoped>
 .contact-form__wrapper {
     padding: 1rem;
+		overflow-y: auto;
 }
 </style>

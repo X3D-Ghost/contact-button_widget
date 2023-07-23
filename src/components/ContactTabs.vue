@@ -69,7 +69,7 @@ const activeTab = ref(0)
 		margin: 1rem;
 }
 .contact-widget__tab-content {
-    padding: 1rem 0;
+    padding: 1rem;
     opacity: 0;
 		transition: opacity 0.5s ease;
 		position: absolute;
@@ -78,6 +78,7 @@ const activeTab = ref(0)
 		width: 100%;
 		height: 100%;
 		z-index: -1;
+		overflow-y: auto;
 }
 .contact-widget__tab-content.is-active {
     opacity: 1;

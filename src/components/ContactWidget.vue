@@ -44,11 +44,13 @@ const formShow = ref(null)
             </slot>
         </button>
         <component :is="component" v-show="isOpen">
-            <div class="contact-widget__header">
-                <slot name="header">
-                    Связь с нами
-                </slot>
-            </div>
+            <template #header>
+                <div class="contact-widget__header">
+                    <slot name="header">
+                        Связь с нами
+                    </slot>
+                </div>
+            </template>
             <div class="contact-widget__body main-block main-block--policies js-main-policies">
                 <contact-tabs v-show="!formShow" :tabs="tabs">
                     <template #content-0>
@@ -67,11 +69,13 @@ const formShow = ref(null)
                 <ContactForm v-if="formShow === 'call'" class="contact-widget__form" />
                 <ContactForm v-if="formShow === 'message'" class="contact-widget__form" />
             </div>
-            <div class="contact-widget__footer">
-                <slot name="footer">
-                    Сделано разработчиком
-                </slot>
-            </div>
+            <template #footer>
+                <div class="contact-widget__footer">
+                    <slot name="footer">
+                        Сделано разработчиком
+                    </slot>
+                </div>
+            </template>
             <button class="popup__close close-feedback contact-widget__button_close" @click="isOpen = false">
                 <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path d="M2 1L1 2l21 21 1-1L2 1z"></path>
