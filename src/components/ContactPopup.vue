@@ -65,8 +65,8 @@ onMounted(() => {
 .contact-widget__popup {
 		position: fixed;
 
-    right: 50px;
-    bottom: 100px;
+    right: 0;
+    bottom: 0;
 
     width: 100%;
     height: 100%;
@@ -93,6 +93,8 @@ onMounted(() => {
     .contact-widget__popup {
         width: 400px;
         height: 600px;
+        right: 50px;
+        bottom: 100px;
     }
 }
 
