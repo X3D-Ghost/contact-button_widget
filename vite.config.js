@@ -1,9 +1,10 @@
 import { defineConfig } from 'vite'
+import { splitVendorChunkPlugin } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(),splitVendorChunkPlugin()],
   build: {
     // cssCodeSplit: true,
     lib: {
@@ -13,12 +14,14 @@ export default defineConfig({
       name: 'ContactWidget',
       formats: ["es", "cjs", "umd"],
       // the proper extensions will be added
-      fileName: 'contact-widget',
+      // fileName: 'contact-widget',
+      fileName: format => `contact-widget.${format}.js`
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      // external: ['vue'],
+      external: ['vue'],
+      // exports: "named",
       output: {
         // Provide global variables to use in the UMD build
         // for externalized deps
@@ -27,6 +30,7 @@ export default defineConfig({
         },
       },
     },
+    target: 'es2015'
   },
   server: {
     hmr: {
