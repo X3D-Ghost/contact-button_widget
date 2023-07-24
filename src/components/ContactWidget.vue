@@ -14,7 +14,7 @@ const props = defineProps({
     socials: Array,
     widgetType: String,
     widgetStyle: {
-        type: String,
+        // type: String,
         default: 'neomorphism'
     },
     needTabs: Boolean,
@@ -27,9 +27,6 @@ const tabs = [
     'Позвонить',
     'Соц сети',
 ]
-
-const showCallForm = ref(false)
-const showMessageForm = ref(false)
 
 const formShow = ref(null)
 </script>
@@ -60,7 +57,7 @@ const formShow = ref(null)
                         <ContactLink href="tel:88003330999" label="Позвонить" type="call" />
                         <ContactLink label="Заказать обратный звонок" type="call-request" @click="formShow = 'message'" />
                     </template>
-                    <template #content-2>
+                    <template #content-2 v-if="socials">
                         <ContactLink v-for="item in socials" :href="item.url" :label="item.title" :type="item.type">
                             <slot :name="`social-${item.type}`" />
                         </ContactLink>
