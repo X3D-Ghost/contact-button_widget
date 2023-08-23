@@ -43,13 +43,14 @@ const contactWidgetPlugin = {
         /* declare global component */
         // app.component("contact-widget", {...ContactWidget, ...options});
         app.component("contact-widget", ContactWidget, options);
+        if (options.needMount) {
 
-        const pluginWrapper = document.createElement("div")
-        app.mount(pluginWrapper)
-        document.body.appendChild(pluginWrapper)
+            const pluginWrapper = document.createElement("div")
+            app.mount(pluginWrapper)
+            document.body.appendChild(pluginWrapper)
 
-        const widgetApp = createApp(ContactWidget, options).mount(options.rootContainer || pluginWrapper)
-
+            const widgetApp = createApp(ContactWidget, options).mount(options.rootContainer || pluginWrapper)
+        }
     },
 };
 

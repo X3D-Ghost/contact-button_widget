@@ -1,4 +1,4 @@
-import { openBlock as a, createElementBlock as s, renderSlot as p, createVNode as C, createElementVNode as c, toDisplayString as m, ref as h, Fragment as $, renderList as x, normalizeClass as L, createCommentVNode as b, onMounted as D, mergeProps as M, createStaticVNode as E, withDirectives as y, vShow as k, createBlock as g, resolveDynamicComponent as j, unref as P, withCtx as v, createTextVNode as V, createSlots as W, pushScopeId as N, popScopeId as z, createApp as F } from "vue";
+import { openBlock as a, createElementBlock as s, renderSlot as _, createVNode as C, createElementVNode as c, toDisplayString as m, ref as h, Fragment as $, renderList as x, normalizeClass as L, createCommentVNode as b, onMounted as D, mergeProps as M, createStaticVNode as E, withDirectives as y, vShow as k, createBlock as g, resolveDynamicComponent as j, unref as P, withCtx as v, createTextVNode as V, createSlots as W, pushScopeId as N, popScopeId as z, createApp as F } from "vue";
 const f = (e, t) => {
   const n = e.__vccOpts || e;
   for (const [o, l] of t)
@@ -61,11 +61,11 @@ const X = ["href", "title"], q = { class: "contact-link__text" }, O = {
       class: "feedback-type contact-link",
       title: e.label
     }, [
-      p(t.$slots, "before-icon", {}, void 0, !0),
-      p(t.$slots, "default", { class: "contact-link__icon" }, () => [
+      _(t.$slots, "before-icon", {}, void 0, !0),
+      _(t.$slots, "default", { class: "contact-link__icon" }, () => [
         C(U, { icon: e.type }, null, 8, ["icon"])
       ], !0),
-      p(t.$slots, "after-icon", {}, void 0, !0),
+      _(t.$slots, "after-icon", {}, void 0, !0),
       c("span", q, m(e.label), 1)
     ], 8, X));
   }
@@ -88,14 +88,14 @@ const G = { class: "contact-widget__tabs-wrapper" }, J = {
       e.showTabs ? (a(), s("div", J, [
         (a(!0), s($, null, x(e.tabs, (l, d) => (a(), s("button", {
           class: L(["contact-widget__tab", { "is-active": t.value === d }]),
-          onClick: (_) => t.value = d
+          onClick: (p) => t.value = d
         }, m(l), 11, K))), 256))
       ])) : b("", !0),
       c("div", Q, [
         (a(!0), s($, null, x(e.tabs, (l, d) => (a(), s("div", {
           class: L(["contact-widget__tab-content", { "is-active": t.value === d }])
         }, [
-          p(n.$slots, `content-${d}`, {}, void 0, !0)
+          _(n.$slots, `content-${d}`, {}, void 0, !0)
         ], 2))), 256))
       ])
     ]));
@@ -111,13 +111,13 @@ const t2 = {
     return D(() => {
       n(document.getElementById("cw-popup"));
       function n(o) {
-        let l = 0, d = 0, _ = 0, r = 0;
+        let l = 0, d = 0, p = 0, r = 0;
         document.getElementById("cw-popup__header") ? document.getElementById("cw-popup__header").onmousedown = u : o.onmousedown = u;
         function u(i) {
-          i = i || window.event, i.preventDefault(), _ = i.clientX, r = i.clientY, document.onmouseup = T, document.onmousemove = Z;
+          i = i || window.event, i.preventDefault(), p = i.clientX, r = i.clientY, document.onmouseup = T, document.onmousemove = Z;
         }
         function Z(i) {
-          i = i || window.event, i.preventDefault(), l = _ - i.clientX, d = r - i.clientY, _ = i.clientX, r = i.clientY, o.style.top = o.offsetTop - d + "px", o.style.left = o.offsetLeft - l + "px";
+          i = i || window.event, i.preventDefault(), l = p - i.clientX, d = r - i.clientY, p = i.clientX, r = i.clientY, o.style.top = o.offsetTop - d + "px", o.style.left = o.offsetLeft - l + "px";
         }
         function T() {
           document.onmouseup = null, document.onmousemove = null;
@@ -130,10 +130,10 @@ const t2 = {
         ref: t.value,
         draggable: "true"
       }, [
-        p(n.$slots, "header", {}, void 0, !0)
+        _(n.$slots, "header", {}, void 0, !0)
       ], 512),
-      p(n.$slots, "default", {}, void 0, !0),
-      p(n.$slots, "footer", {}, void 0, !0)
+      _(n.$slots, "default", {}, void 0, !0),
+      _(n.$slots, "footer", {}, void 0, !0)
     ]));
   }
 }, o2 = /* @__PURE__ */ f(n2, [["__scopeId", "data-v-cb169cad"]]);
@@ -172,7 +172,7 @@ const r2 = { class: "contact-form__wrapper" }, u2 = {
   method: "post",
   class: "contact-form",
   novalidate: "novalidate"
-}, p2 = /* @__PURE__ */ E('<div class="checkbox js-input js-parent-input-error" data-related-checkbox=".js-text-confirmation" data-v-d6baf611><input value="Y" type="checkbox" checked readonly data-v-d6baf611><label class="checkbox__label" for="callback-chx-4" data-v-d6baf611><span class="checkbox__text" data-v-d6baf611> Я даю согласие на обработку персональных данных </span></label><div class="input__message" data-v-d6baf611></div></div>', 1), _2 = { class: "btn-wrap" }, C2 = {
+}, _2 = /* @__PURE__ */ E('<div class="checkbox js-input js-parent-input-error" data-related-checkbox=".js-text-confirmation" data-v-d6baf611><input value="Y" type="checkbox" checked readonly data-v-d6baf611><label class="checkbox__label" for="callback-chx-4" data-v-d6baf611><span class="checkbox__text" data-v-d6baf611> Я даю согласие на обработку персональных данных </span></label><div class="input__message" data-v-d6baf611></div></div>', 1), p2 = { class: "btn-wrap" }, C2 = {
   class: "cw-button",
   id: "callback-submit",
   type: "submit"
@@ -212,8 +212,8 @@ const r2 = { class: "contact-form__wrapper" }, u2 = {
           modelValue: t.value.message,
           "onUpdate:modelValue": o[2] || (o[2] = (l) => t.value.message = l)
         }, null, 8, ["modelValue"]),
-        p2,
-        c("div", _2, [
+        _2,
+        c("div", p2, [
           c("button", C2, m(e.buttonText), 1)
         ])
       ])
@@ -261,14 +261,14 @@ const I = (e) => (N("data-v-ac13bb24"), e = e(), z(), e), f2 = /* @__PURE__ */ I
       "Позвонить",
       "Соц сети"
     ], d = h(null);
-    return (_, r) => (a(), s("div", {
+    return (p, r) => (a(), s("div", {
       class: L(["contact-widget", `style_${e.widgetStyle}`])
     }, [
       y(c("button", {
         class: "contact-button",
         onClick: r[0] || (r[0] = (u) => n.value = !n.value)
       }, [
-        p(_.$slots, "button_content", {}, () => [
+        _(p.$slots, "button_content", {}, () => [
           f2
         ], !0)
       ], 512), [
@@ -277,14 +277,14 @@ const I = (e) => (N("data-v-ac13bb24"), e = e(), z(), e), f2 = /* @__PURE__ */ I
       y((a(), g(j(P(o)), null, {
         header: v(() => [
           c("div", h2, [
-            p(_.$slots, "header", {}, () => [
+            _(p.$slots, "header", {}, () => [
               V(" Связь с нами ")
             ], !0)
           ])
         ]),
         footer: v(() => [
           c("div", b2, [
-            p(_.$slots, "footer", {}, () => [
+            _(p.$slots, "footer", {}, () => [
               V(" Сделано разработчиком ")
             ], !0)
           ])
@@ -322,7 +322,7 @@ const I = (e) => (N("data-v-ac13bb24"), e = e(), z(), e), f2 = /* @__PURE__ */ I
                     type: u.type
                   }, {
                     default: v(() => [
-                      p(_.$slots, `social-${u.type}`, {}, void 0, !0)
+                      _(p.$slots, `social-${u.type}`, {}, void 0, !0)
                     ]),
                     _: 2
                   }, 1032, ["href", "label", "type"]))), 256))
@@ -354,9 +354,10 @@ const I = (e) => (N("data-v-ac13bb24"), e = e(), z(), e), f2 = /* @__PURE__ */ I
   }
 }, H = /* @__PURE__ */ f(y2, [["__scopeId", "data-v-ac13bb24"]]), k2 = {
   install: (e, t) => {
-    console.log("contactWidgetPlugin"), e.component("contact-widget", H, t);
-    const n = document.createElement("div");
-    e.mount(n), document.body.appendChild(n), F(H, t).mount(t.rootContainer || n);
+    if (console.log("contactWidgetPlugin"), e.component("contact-widget", H, t), t.needMount) {
+      const n = document.createElement("div");
+      e.mount(n), document.body.appendChild(n), F(H, t).mount(t.rootContainer || n);
+    }
   }
 };
 window.contactWidgetPlugin = k2;
