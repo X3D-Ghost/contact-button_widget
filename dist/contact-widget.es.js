@@ -1,16 +1,16 @@
-import { openBlock as a, createElementBlock as s, renderSlot as p, createVNode as C, createElementVNode as c, toDisplayString as m, ref as h, Fragment as $, renderList as x, normalizeClass as L, createCommentVNode as b, onMounted as E, mergeProps as V, createStaticVNode as P, withDirectives as y, vShow as k, createBlock as g, resolveDynamicComponent as W, unref as j, withCtx as v, createTextVNode as S, createSlots as z, pushScopeId as N, popScopeId as Y, createApp as H } from "vue";
-const f = (t, e) => {
-  const o = t.__vccOpts || t;
-  for (const [n, l] of e)
-    o[n] = l;
-  return o;
-}, F = ["innerHTML"], A = {
+import { openBlock as a, createElementBlock as s, renderSlot as p, createVNode as C, createElementVNode as c, toDisplayString as m, ref as h, Fragment as $, renderList as x, normalizeClass as L, createCommentVNode as b, onMounted as D, mergeProps as M, createStaticVNode as E, withDirectives as y, vShow as k, createBlock as g, resolveDynamicComponent as j, unref as P, withCtx as v, createTextVNode as V, createSlots as W, pushScopeId as N, popScopeId as z, createApp as F } from "vue";
+const f = (e, t) => {
+  const n = e.__vccOpts || e;
+  for (const [o, l] of t)
+    n[o] = l;
+  return n;
+}, Y = ["innerHTML"], A = {
   __name: "ContactIcon",
   props: {
     icon: String
   },
-  setup(t) {
-    const e = {
+  setup(e) {
+    const t = {
       vk: `<circle cx="25" cy="25" r="24" stroke="#B2B2B2"></circle>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M26.177 31.7173C26.177 31.7173 26.6101 31.6701 26.832 31.4362C27.0351 31.2219 27.028 30.8174 27.028 30.8174C27.028 30.8174 27.001 28.9289 27.8943 28.6501C28.7747 28.3758 29.9051 30.4764 31.1048 31.2841C32.011 31.8948 32.6989 31.7611 32.6989 31.7611L35.9046 31.7173C35.9046 31.7173 37.5809 31.6159 36.7862 30.322C36.7204 30.216 36.3225 29.3645 34.4033 27.6154C32.3925 25.7844 32.6625 26.0806 35.0829 22.9131C36.5573 20.9842 37.1465 19.8066 36.9622 19.3031C36.7873 18.8215 35.7027 18.9494 35.7027 18.9494L32.0943 18.9713C32.0943 18.9713 31.8267 18.9355 31.6283 19.0519C31.4346 19.166 31.309 19.4322 31.309 19.4322C31.309 19.4322 30.7385 20.9243 29.9767 22.1941C28.3697 24.8719 27.7276 25.0136 27.4647 24.8477C26.8531 24.4594 27.0057 23.2899 27.0057 22.4591C27.0057 19.8631 27.4072 18.7811 26.2251 18.5011C25.8331 18.4078 25.5443 18.3467 24.5407 18.3364C23.253 18.3237 22.1636 18.341 21.5462 18.6371C21.1353 18.8341 20.8184 19.2743 21.0121 19.2997C21.2504 19.3308 21.7904 19.4425 22.0768 19.8251C22.4465 20.3194 22.4336 21.4278 22.4336 21.4278C22.4336 21.4278 22.6461 24.4836 21.9371 24.8627C21.4511 25.1231 20.7844 24.5919 19.3511 22.1618C18.6175 20.9174 18.0634 19.5416 18.0634 19.5416C18.0634 19.5416 17.9566 19.2847 17.7653 19.1464C17.534 18.9793 17.2112 18.9275 17.2112 18.9275L13.7824 18.9494C13.7824 18.9494 13.2671 18.9632 13.0781 19.1833C12.9102 19.378 13.0652 19.7824 13.0652 19.7824C13.0652 19.7824 15.7498 25.9481 18.79 29.0556C21.5779 31.904 24.7426 31.7173 24.7426 31.7173H26.177Z" fill="#B2B2B2"></path>
         `,
@@ -36,15 +36,15 @@ const f = (t, e) => {
             <path d="M30.3334 19.6667L19.6667 30.3334M30.3334 19.6667H23.8148M30.3334 19.6667V25.5927" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         `
     };
-    return (o, n) => (a(), s("svg", {
+    return (n, o) => (a(), s("svg", {
       width: "50",
       height: "50",
       class: "contact-widget__icon",
       viewBox: "0 0 50 50",
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
-      innerHTML: e[t.icon]
-    }, null, 8, F));
+      innerHTML: t[e.icon]
+    }, null, 8, Y));
   }
 }, U = /* @__PURE__ */ f(A, [["__scopeId", "data-v-329eba39"]]);
 const X = ["href", "title"], q = { class: "contact-link__text" }, O = {
@@ -54,19 +54,19 @@ const X = ["href", "title"], q = { class: "contact-link__text" }, O = {
     href: String,
     type: String
   },
-  setup(t) {
-    return (e, o) => (a(), s("a", {
-      href: t.href,
+  setup(e) {
+    return (t, n) => (a(), s("a", {
+      href: e.href,
       target: "_blank",
       class: "feedback-type contact-link",
-      title: t.label
+      title: e.label
     }, [
-      p(e.$slots, "before-icon", {}, void 0, !0),
-      p(e.$slots, "default", { class: "contact-link__icon" }, () => [
-        C(U, { icon: t.type }, null, 8, ["icon"])
+      p(t.$slots, "before-icon", {}, void 0, !0),
+      p(t.$slots, "default", { class: "contact-link__icon" }, () => [
+        C(U, { icon: e.type }, null, 8, ["icon"])
       ], !0),
-      p(e.$slots, "after-icon", {}, void 0, !0),
-      c("span", q, m(t.label), 1)
+      p(t.$slots, "after-icon", {}, void 0, !0),
+      c("span", q, m(e.label), 1)
     ], 8, X));
   }
 }, w = /* @__PURE__ */ f(O, [["__scopeId", "data-v-f87dbdd4"]]);
@@ -82,61 +82,61 @@ const G = { class: "contact-widget__tabs-wrapper" }, J = {
       default: !0
     }
   },
-  setup(t) {
-    const e = h(0);
-    return (o, n) => (a(), s("div", G, [
-      t.showTabs ? (a(), s("div", J, [
-        (a(!0), s($, null, x(t.tabs, (l, d) => (a(), s("button", {
-          class: L(["contact-widget__tab", { "is-active": e.value === d }]),
-          onClick: (_) => e.value = d
+  setup(e) {
+    const t = h(0);
+    return (n, o) => (a(), s("div", G, [
+      e.showTabs ? (a(), s("div", J, [
+        (a(!0), s($, null, x(e.tabs, (l, d) => (a(), s("button", {
+          class: L(["contact-widget__tab", { "is-active": t.value === d }]),
+          onClick: (_) => t.value = d
         }, m(l), 11, K))), 256))
       ])) : b("", !0),
       c("div", Q, [
-        (a(!0), s($, null, x(t.tabs, (l, d) => (a(), s("div", {
-          class: L(["contact-widget__tab-content", { "is-active": e.value === d }])
+        (a(!0), s($, null, x(e.tabs, (l, d) => (a(), s("div", {
+          class: L(["contact-widget__tab-content", { "is-active": t.value === d }])
         }, [
-          p(o.$slots, `content-${d}`, {}, void 0, !0)
+          p(n.$slots, `content-${d}`, {}, void 0, !0)
         ], 2))), 256))
       ])
     ]));
   }
-}, t2 = /* @__PURE__ */ f(R, [["__scopeId", "data-v-26e4ce83"]]);
-const e2 = {
+}, e2 = /* @__PURE__ */ f(R, [["__scopeId", "data-v-26e4ce83"]]);
+const t2 = {
   id: "cw-popup",
   class: "contact-widget__popup popup-feedback popup-feedback-parent"
-}, o2 = {
+}, n2 = {
   __name: "ContactPopup",
-  setup(t) {
-    const e = h();
-    return E(() => {
-      o(document.getElementById("cw-popup"));
-      function o(n) {
+  setup(e) {
+    const t = h();
+    return D(() => {
+      n(document.getElementById("cw-popup"));
+      function n(o) {
         let l = 0, d = 0, _ = 0, r = 0;
-        document.getElementById("cw-popup__header") ? document.getElementById("cw-popup__header").onmousedown = u : n.onmousedown = u;
+        document.getElementById("cw-popup__header") ? document.getElementById("cw-popup__header").onmousedown = u : o.onmousedown = u;
         function u(i) {
-          i = i || window.event, i.preventDefault(), _ = i.clientX, r = i.clientY, document.onmouseup = D, document.onmousemove = T;
+          i = i || window.event, i.preventDefault(), _ = i.clientX, r = i.clientY, document.onmouseup = T, document.onmousemove = Z;
         }
-        function T(i) {
-          i = i || window.event, i.preventDefault(), l = _ - i.clientX, d = r - i.clientY, _ = i.clientX, r = i.clientY, n.style.top = n.offsetTop - d + "px", n.style.left = n.offsetLeft - l + "px";
+        function Z(i) {
+          i = i || window.event, i.preventDefault(), l = _ - i.clientX, d = r - i.clientY, _ = i.clientX, r = i.clientY, o.style.top = o.offsetTop - d + "px", o.style.left = o.offsetLeft - l + "px";
         }
-        function D() {
+        function T() {
           document.onmouseup = null, document.onmousemove = null;
         }
       }
-    }), (o, n) => (a(), s("div", e2, [
+    }), (n, o) => (a(), s("div", t2, [
       c("div", {
         id: "cw-popup__header",
         class: "contact-widget__popup-header",
-        ref: e.value,
+        ref: t.value,
         draggable: "true"
       }, [
-        p(o.$slots, "header", {}, void 0, !0)
+        p(n.$slots, "header", {}, void 0, !0)
       ], 512),
-      p(o.$slots, "default", {}, void 0, !0),
-      p(o.$slots, "footer", {}, void 0, !0)
+      p(n.$slots, "default", {}, void 0, !0),
+      p(n.$slots, "footer", {}, void 0, !0)
     ]));
   }
-}, n2 = /* @__PURE__ */ f(o2, [["__scopeId", "data-v-cb169cad"]]);
+}, o2 = /* @__PURE__ */ f(n2, [["__scopeId", "data-v-cb169cad"]]);
 const a2 = { class: "contact-input__wrapper" }, c2 = ["for"], l2 = ["id", "type"], s2 = ["id"], d2 = { class: "contact-input__caption" }, i2 = {
   __name: "ContactInput",
   props: {
@@ -145,26 +145,26 @@ const a2 = { class: "contact-input__wrapper" }, c2 = ["for"], l2 = ["id", "type"
     type: String,
     id: String
   },
-  setup(t) {
-    return (e, o) => (a(), s("div", a2, [
+  setup(e) {
+    return (t, n) => (a(), s("div", a2, [
       c("label", {
-        for: t.id,
+        for: e.id,
         class: "contact-input__label"
-      }, m(t.label), 9, c2),
-      t.type !== "textarea" ? (a(), s("input", V({ key: 0 }, e.$attrs, {
-        id: t.id,
-        type: t.type,
+      }, m(e.label), 9, c2),
+      e.type !== "textarea" ? (a(), s("input", M({ key: 0 }, t.$attrs, {
+        id: e.id,
+        type: e.type,
         class: "contact-input"
       }), null, 16, l2)) : b("", !0),
-      t.type === "textarea" ? (a(), s("textarea", V({ key: 1 }, e.$attrs, {
+      e.type === "textarea" ? (a(), s("textarea", M({ key: 1 }, t.$attrs, {
         name: "",
-        id: t.id,
+        id: e.id,
         cols: "30",
         rows: "5",
         class: "contact-input contact-input_textarea"
       }), `
 		`, 16, s2)) : b("", !0),
-      c("span", d2, m(t.caption), 1)
+      c("span", d2, m(e.caption), 1)
     ]));
   }
 }, B = /* @__PURE__ */ f(i2, [["__scopeId", "data-v-44ecd7a7"]]);
@@ -172,7 +172,7 @@ const r2 = { class: "contact-form__wrapper" }, u2 = {
   method: "post",
   class: "contact-form",
   novalidate: "novalidate"
-}, p2 = /* @__PURE__ */ P('<div class="checkbox js-input js-parent-input-error" data-related-checkbox=".js-text-confirmation" data-v-d6baf611><input value="Y" type="checkbox" checked readonly data-v-d6baf611><label class="checkbox__label" for="callback-chx-4" data-v-d6baf611><span class="checkbox__text" data-v-d6baf611> Я даю согласие на обработку персональных данных </span></label><div class="input__message" data-v-d6baf611></div></div>', 1), _2 = { class: "btn-wrap" }, C2 = {
+}, p2 = /* @__PURE__ */ E('<div class="checkbox js-input js-parent-input-error" data-related-checkbox=".js-text-confirmation" data-v-d6baf611><input value="Y" type="checkbox" checked readonly data-v-d6baf611><label class="checkbox__label" for="callback-chx-4" data-v-d6baf611><span class="checkbox__text" data-v-d6baf611> Я даю согласие на обработку персональных данных </span></label><div class="input__message" data-v-d6baf611></div></div>', 1), _2 = { class: "btn-wrap" }, C2 = {
   class: "cw-button",
   id: "callback-submit",
   type: "submit"
@@ -184,43 +184,43 @@ const r2 = { class: "contact-form__wrapper" }, u2 = {
       default: "Отправить"
     }
   },
-  setup(t) {
-    const e = h({
+  setup(e) {
+    const t = h({
       name: "",
       phone: "",
       message: ""
     });
-    return (o, n) => (a(), s("div", r2, [
+    return (n, o) => (a(), s("div", r2, [
       c("form", u2, [
         C(B, {
           id: "contact-name",
           label: "Ваше имя",
-          modelValue: e.value.name,
-          "onUpdate:modelValue": n[0] || (n[0] = (l) => e.value.name = l)
+          modelValue: t.value.name,
+          "onUpdate:modelValue": o[0] || (o[0] = (l) => t.value.name = l)
         }, null, 8, ["modelValue"]),
         C(B, {
           id: "contact-phone",
           label: "Ваш Телефон",
           placeholder: "+7 (___) ___-__-__",
-          modelValue: e.value.phone,
-          "onUpdate:modelValue": n[1] || (n[1] = (l) => e.value.phone = l)
+          modelValue: t.value.phone,
+          "onUpdate:modelValue": o[1] || (o[1] = (l) => t.value.phone = l)
         }, null, 8, ["modelValue"]),
         C(B, {
           id: "contact-message",
           type: "textarea",
           label: "Ваше сообщение",
-          modelValue: e.value.message,
-          "onUpdate:modelValue": n[2] || (n[2] = (l) => e.value.message = l)
+          modelValue: t.value.message,
+          "onUpdate:modelValue": o[2] || (o[2] = (l) => t.value.message = l)
         }, null, 8, ["modelValue"]),
         p2,
         c("div", _2, [
-          c("button", C2, m(t.buttonText), 1)
+          c("button", C2, m(e.buttonText), 1)
         ])
       ])
     ]));
   }
-}, I = /* @__PURE__ */ f(v2, [["__scopeId", "data-v-d6baf611"]]);
-const Z = (t) => (N("data-v-ac13bb24"), t = t(), Y(), t), f2 = /* @__PURE__ */ Z(() => /* @__PURE__ */ c("svg", {
+}, S = /* @__PURE__ */ f(v2, [["__scopeId", "data-v-d6baf611"]]);
+const I = (e) => (N("data-v-ac13bb24"), e = e(), z(), e), f2 = /* @__PURE__ */ I(() => /* @__PURE__ */ c("svg", {
   width: "22",
   height: "21",
   viewBox: "0 0 22 21",
@@ -233,7 +233,7 @@ const Z = (t) => (N("data-v-ac13bb24"), t = t(), Y(), t), f2 = /* @__PURE__ */ Z
     d: "M22 3.25596C22 1.46296 20.548 0 18.744 0H3.25596C1.46296 0 0 1.45196 0 3.25596V12.7551C0 14.5481 1.45196 16.011 3.25596 16.011H17.6L21.1099 20.3896C21.4053 20.7582 22 20.5492 22 20.0768V3.25596ZM3.96973 6C3.96973 5.44772 4.41744 5 4.96973 5H16.9697C17.522 5 17.9697 5.44772 17.9697 6C17.9697 6.55228 17.522 7 16.9697 7H4.96973C4.41744 7 3.96973 6.55228 3.96973 6ZM4.96973 9C4.41744 9 3.96973 9.44771 3.96973 10C3.96973 10.5523 4.41744 11 4.96973 11H12.9697C13.522 11 13.9697 10.5523 13.9697 10C13.9697 9.44771 13.522 9 12.9697 9H4.96973Z",
     fill: "white"
   })
-], -1)), h2 = { class: "contact-widget__header" }, m2 = { class: "contact-widget__body main-block main-block--policies js-main-policies" }, b2 = { class: "contact-widget__footer" }, g2 = /* @__PURE__ */ Z(() => /* @__PURE__ */ c("svg", {
+], -1)), h2 = { class: "contact-widget__header" }, m2 = { class: "contact-widget__body main-block main-block--policies js-main-policies" }, b2 = { class: "contact-widget__footer" }, g2 = /* @__PURE__ */ I(() => /* @__PURE__ */ c("svg", {
   viewBox: "0 0 24 24",
   xmlns: "http://www.w3.org/2000/svg",
   "xmlns:xlink": "http://www.w3.org/1999/xlink"
@@ -253,45 +253,45 @@ const Z = (t) => (N("data-v-ac13bb24"), t = t(), Y(), t), f2 = /* @__PURE__ */ Z
     },
     needTabs: Boolean
   },
-  setup(t) {
-    const e = t, o = h(!1);
+  setup(e) {
+    const t = e, n = h(!1);
     h(1);
-    const n = e.widgetType === "popup" && n2, l = [
+    const o = t.widgetType === "popup" && o2, l = [
       "Написать",
       "Позвонить",
       "Соц сети"
     ], d = h(null);
     return (_, r) => (a(), s("div", {
-      class: L(["contact-widget", `style_${t.widgetStyle}`])
+      class: L(["contact-widget", `style_${e.widgetStyle}`])
     }, [
       y(c("button", {
         class: "contact-button",
-        onClick: r[0] || (r[0] = (u) => o.value = !o.value)
+        onClick: r[0] || (r[0] = (u) => n.value = !n.value)
       }, [
         p(_.$slots, "button_content", {}, () => [
           f2
         ], !0)
       ], 512), [
-        [k, !o.value]
+        [k, !n.value]
       ]),
-      y((a(), g(W(j(n)), null, {
+      y((a(), g(j(P(o)), null, {
         header: v(() => [
           c("div", h2, [
             p(_.$slots, "header", {}, () => [
-              S(" Связь с нами ")
+              V(" Связь с нами ")
             ], !0)
           ])
         ]),
         footer: v(() => [
           c("div", b2, [
             p(_.$slots, "footer", {}, () => [
-              S(" Сделано разработчиком ")
+              V(" Сделано разработчиком ")
             ], !0)
           ])
         ]),
         default: v(() => [
           c("div", m2, [
-            y(C(t2, { tabs: l }, z({
+            y(C(e2, { tabs: l }, W({
               "content-0": v(() => [
                 C(w, {
                   label: "Задать вопрос",
@@ -313,10 +313,10 @@ const Z = (t) => (N("data-v-ac13bb24"), t = t(), Y(), t), f2 = /* @__PURE__ */ Z
               ]),
               _: 2
             }, [
-              t.socials ? {
+              e.socials ? {
                 name: "content-2",
                 fn: v(() => [
-                  (a(!0), s($, null, x(t.socials, (u) => (a(), g(w, {
+                  (a(!0), s($, null, x(e.socials, (u) => (a(), g(w, {
                     href: u.url,
                     label: u.title,
                     type: u.type
@@ -332,67 +332,36 @@ const Z = (t) => (N("data-v-ac13bb24"), t = t(), Y(), t), f2 = /* @__PURE__ */ Z
             ]), 1536), [
               [k, !d.value]
             ]),
-            d.value === "call" ? (a(), g(I, {
+            d.value === "call" ? (a(), g(S, {
               key: 0,
               class: "contact-widget__form"
             })) : b("", !0),
-            d.value === "message" ? (a(), g(I, {
+            d.value === "message" ? (a(), g(S, {
               key: 1,
               class: "contact-widget__form"
             })) : b("", !0)
           ]),
           c("button", {
             class: "popup__close close-feedback contact-widget__button_close",
-            onClick: r[3] || (r[3] = (u) => o.value = !1)
+            onClick: r[3] || (r[3] = (u) => n.value = !1)
           }, w2)
         ]),
         _: 3
       }, 512)), [
-        [k, o.value]
+        [k, n.value]
       ])
     ], 2));
   }
-}, M = /* @__PURE__ */ f(y2, [["__scopeId", "data-v-ac13bb24"]]), k2 = {
-  rootContainer: "#app",
-  socials: [
-    {
-      url: "https://vk.com/",
-      title: "Вконтакте",
-      type: "vk"
-    },
-    {
-      url: "https://ok.ru/",
-      title: "Одноклассники",
-      type: "ok"
-    },
-    {
-      url: "https://dzen.ru/",
-      title: "Дзен",
-      type: "dzen"
-    },
-    {
-      url: "https://www.youtube.com/",
-      title: "Youtube",
-      type: "yt"
-    }
-  ],
-  widgetType: "popup",
-  needTabs: !0
-};
-function x2(t) {
-  H(M, k2).mount(t.rootContainer);
-}
-const B2 = {
-  install: (t, e) => {
-    console.log("contactWidgetPlugin"), t.component("contact-widget", M, e);
-    const o = document.createElement("div");
-    t.mount(o), document.body.appendChild(o), H(M, e).mount(e.rootContainer || o);
+}, H = /* @__PURE__ */ f(y2, [["__scopeId", "data-v-ac13bb24"]]), k2 = {
+  install: (e, t) => {
+    console.log("contactWidgetPlugin"), e.component("contact-widget", H, t);
+    const n = document.createElement("div");
+    e.mount(n), document.body.appendChild(n), F(H, t).mount(t.rootContainer || n);
   }
 };
-window.contactWidgetPlugin = B2;
+window.contactWidgetPlugin = k2;
 export {
-  M as ContactWidget,
-  x2 as contactWidgetInit,
-  B2 as contactWidgetPlugin,
-  B2 as default
+  H as ContactWidget,
+  k2 as contactWidgetPlugin,
+  k2 as default
 };

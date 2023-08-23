@@ -3,7 +3,7 @@ import './style.css'
 // import App from './App.vue'
 import ContactWidget from "./components/ContactWidget.vue";
 
-const widgetParams = {
+/*const widgetParams = {
     rootContainer: '#app',
     socials: [
         {
@@ -29,13 +29,13 @@ const widgetParams = {
     ],
     widgetType: 'popup',
     needTabs: true,
-}
+}*/
 
 // const contactWidgetComponent = defineCustomElement(ContactWidget)
 
-export function contactWidgetInit(params) {
+/*export function contactWidgetInit(params) {
     const widgetApp = createApp(ContactWidget, widgetParams).mount(params.rootContainer)
-}
+}*/
 
 const contactWidgetPlugin = {
     install: (app, options) => {
