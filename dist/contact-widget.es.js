@@ -393,5 +393,6 @@ window.contactWidgetPlugin = B2;
 export {
   M as ContactWidget,
   x2 as contactWidgetInit,
+  B2 as contactWidgetPlugin,
   B2 as default
 };
