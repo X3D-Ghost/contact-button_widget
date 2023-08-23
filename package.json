@@ -28,7 +28,10 @@
       "import": "./dist/contact-widget.es.js",
       "require": "./dist/contact-widget.umd.js"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./dist/style.css": "./dist/style.css",
+    "./src": {
+      "import": "./src/main.js"
+    }
   },
   "main": "./dist/contact-widget.umd.js",
   "module": "./dist/contact-widget.es.js"
