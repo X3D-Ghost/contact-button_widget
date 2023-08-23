@@ -24,11 +24,11 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/contact-widget.js",
+      "import": "./dist/contact-widget.es.js",
       "require": "./dist/contact-widget.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
   "main": "./dist/contact-widget.umd.js",
-  "module": "./dist/contact-widget.js"
+  "module": "./dist/contact-widget.es.js"
 }
