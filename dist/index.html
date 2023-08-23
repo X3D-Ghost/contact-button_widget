@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue</title>
+  </head>
+  <body>
+  <h1>
+    Контактная кнопка
+  </h1>
+    <div id="app">
+      <h2>
+        Контактная кнопка
+      </h2>
+    </div>
+<!--  <script src="http://unpkg.com/vue@3.2.36/dist/vue.esm-browser.prod.js"></script>-->
+<!--  <script type="module" src="//unpkg.com/vue@3.2.36/dist/vue.esm-bundler.js"></script>-->
+  <script src="//unpkg.com/vue@3.2.36/dist/vue.global.js"></script>
+  <script src="./contact-widget.umd.js" type="text/javascript"></script>
+  <script defer>
+    window.vue = window.Vue;
+    const widgetParams = {
+      rootContainer: '#app',
+      socials: [
+        {
+          url: 'https://vk.com/',
+          title: 'Вконтакте',
+          type: 'vk'
+        },
+        {
+          url: 'https://ok.ru/',
+          title: 'Одноклассники',
+          type: 'ok'
+        },
+        {
+          url: 'https://tg.ru/',
+          title: 'Telegram',
+          type: 'tg'
+        },
+        {
+          url: 'https://dzen.ru/',
+          title: 'Дзен',
+          type: 'dzen'
+        },
+        {
+          url: 'https://www.youtube.com/',
+          title: 'Youtube',
+          type: 'yt'
+        },
+      ],
+      widgetType: 'popup',
+      needTabs: true,
+    }
+
+    const app = vue.createApp({})
+
+    app.mount(widgetParams.rootContainer)
+    app.use(contactWidgetPlugin, widgetParams )
+  </script>
+  </body>
+</html>
