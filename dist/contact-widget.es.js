@@ -391,6 +391,7 @@ const B2 = {
 };
 window.contactWidgetPlugin = B2;
 export {
+  M as ContactWidget,
   x2 as contactWidgetInit,
   B2 as default
 };
