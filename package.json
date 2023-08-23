@@ -31,7 +31,8 @@
     "./dist/style.css": "./dist/style.css",
     "./src": {
       "import": "./src/main.js"
-    }
+    },
+    "./src/style.css": "./src/style.css"
   },
   "main": "./dist/contact-widget.umd.js",
   "module": "./dist/contact-widget.es.js"
