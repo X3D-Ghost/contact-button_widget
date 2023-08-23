@@ -57,7 +57,7 @@ window.contactWidgetPlugin = contactWidgetPlugin
 
 export default contactWidgetPlugin
 
-export { ContactWidget }
+export { contactWidgetPlugin, ContactWidget }
 
 // register
 // customElements.define('contactWidgetComponent', contactWidgetComponent)
